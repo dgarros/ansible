@@ -582,7 +582,6 @@ class AosInventory(object):
 
         return clean_group
 
-
     def add_device_status_to_var(self, device_name, device):
 
         if 'status' in device.value.keys():
