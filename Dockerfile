@@ -1,4 +1,4 @@
-FROM apstra/aos-pyez:develop
+FROM apstra/aos-pyez:api_token_verification
 MAINTAINER community@apstra.com
 
 RUN rm -rf /source && mkdir /source
