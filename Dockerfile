@@ -7,6 +7,7 @@ WORKDIR /source
 COPY *.* /source/
 COPY lib lib
 COPY bin bin
+COPY packaging packaging
 COPY contrib contrib
 COPY docs docs
 COPY examples examples
@@ -24,7 +25,6 @@ RUN apk update &&\
     rm -rf /var/cache/apk/*
 
 COPY contrib/inventory/apstra_aos.py /etc/ansible/hosts
-# COPY contrib/inventory/apstra_aos.ini /etc/ansible/apstra_aos.ini
 RUN chmod +x /etc/ansible/hosts
 
 RUN echo "[default]\nhost_key_checking = False\nretry_files_enabled = False" > /etc/ansible/ansible.cfg
